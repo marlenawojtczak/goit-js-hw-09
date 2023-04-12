@@ -1,5 +1,6 @@
 const startBtn = document.querySelector('button[data-start]');
 const stopBtn = document.querySelector('button[data-stop]');
+let intervalId;
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
