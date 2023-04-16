@@ -36,8 +36,8 @@ const options = {
 const fp = flatpickr(picker, options);
 
 const displayCountdown = value => {
+  const selectedDate = value;
   intervalId = setInterval(() => {
-    const selectedDate = value;
     const today = new Date();
     const remainingTime = selectedDate - today;
     if (remainingTime < 0) {
