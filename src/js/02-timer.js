@@ -72,4 +72,5 @@ const addLeadingZero = value => {
 startBtn.addEventListener('click', () => {
   const selectedDate = new Date(picker.value);
   displayCountdown(selectedDate);
+  startBtn.disabled = true;
 });
