@@ -18,7 +18,7 @@ const options = {
   onClose(selectedDates) {
     const selectedDate = selectedDates[0];
     const today = new Date();
-        if (selectedDate < today) {
+    if (selectedDate < today) {
       Notiflix.Notify.failure('Please choose a date in the future', {
         timeout: 10000,
         position: 'center-center',
@@ -35,8 +35,9 @@ const options = {
 
 const fp = flatpickr(picker, options);
 
-const displayCountdown = () => {
+const displayCountdown = value => {
   intervalId = setInterval(() => {
+    const selectedDate = value;
     const today = new Date();
     const remainingTime = selectedDate - today;
     if (remainingTime < 0) {
