@@ -36,6 +36,7 @@ const options = {
 const fp = flatpickr(picker, options);
 
 const displayCountdown = value => {
+  clearInterval(intervalId);
   const selectedDate = value;
   intervalId = setInterval(() => {
     const today = new Date();
@@ -70,7 +71,7 @@ const addLeadingZero = value => {
 };
 
 startBtn.addEventListener('click', () => {
+  startBtn.disabled = true;
   const selectedDate = new Date(picker.value);
   displayCountdown(selectedDate);
-  startBtn.disabled = true;
 });
