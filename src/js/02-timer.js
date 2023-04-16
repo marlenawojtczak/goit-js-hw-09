@@ -16,10 +16,9 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    selectedDate = selectedDates[0];
+    const selectedDate = selectedDates[0];
     const today = new Date();
-    const remainingTime = selectedDate - today;
-    if (selectedDate < today) {
+        if (selectedDate < today) {
       Notiflix.Notify.failure('Please choose a date in the future', {
         timeout: 10000,
         position: 'center-center',

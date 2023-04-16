@@ -78,8 +78,7 @@ button:active {
   transform: scale(1.02);
 }
 button:disabled {
-  cursor:auto;
+  cursor: auto;
   background-color: rgb(186, 184, 184);
   transform: none;
-  
 }
